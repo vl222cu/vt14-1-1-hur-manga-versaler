@@ -16,8 +16,23 @@ namespace _1dv406_1_1
 
         protected void SendButton_Click(object sender, EventArgs e)
         {
-            ResultInfo.Text = "Texten innehåller";
-            ResultInfo.Visible = true;
+            // Analyserar textboxfältet och presenterar antalet inmatade
+            // versaler med möjlighet att rensa textfältet och börja om
+            if (TextBoxArea.Enabled)
+            { 
+                int capitalLetters = Model.TextAnalyzer.GetNumberOfCapitals(TextBoxArea.Text);
+                TextBoxArea.Enabled = false;
+                ResultInfo.Text = String.Format("Texten innehåller {0} versaler", capitalLetters);
+                ResultInfo.Visible = true;
+                SendButton.Text = "Rensa";
+            }
+            else
+            {
+                TextBoxArea.Text = "";
+                TextBoxArea.Enabled = true;
+                ResultInfo.Visible = false;
+                SendButton.Text = "Beräkna antalet versaler";
+            }
         }
     }
 }
