@@ -8,8 +8,8 @@
     <link href="~/Style.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
+    <form id="MyForm" runat="server">
+        <div id="maincontainer">
             <h1>
                 <asp:Label ID="TitleLabel" runat="server" Text="Hur många versaler?" CssClass="header"></asp:Label>
             </h1>

@@ -65,6 +65,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomErrorMessage.html" />
     <Content Include="Default.aspx" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
