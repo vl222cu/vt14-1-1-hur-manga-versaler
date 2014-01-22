@@ -9,12 +9,20 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    <h1>
-        <asp:Label ID="TitleLabel" runat="server" Text="Hur många versaler?" CssClass="header"></asp:Label>
-    </h1>
-        <asp:TextBox ID="TextBoxArea" TextMode="multiline" Columns="70" Rows="10" runat="server" CssClass="textarea"></asp:TextBox>
-    </div>
+        <div>
+            <h1>
+                <asp:Label ID="TitleLabel" runat="server" Text="Hur många versaler?" CssClass="header"></asp:Label>
+            </h1>
+            <div>
+                <asp:TextBox ID="TextBoxArea" TextMode="multiline" Columns="70" Rows="10" runat="server" CssClass="textarea"></asp:TextBox>
+            </div>
+            <p>
+                <asp:Label ID="ResultInfo" runat="server" Visible="false"></asp:Label>
+            </p>
+            <p>
+                <asp:Button ID="SendButton" runat="server" Text="Beräkna antalet versaler" OnClick="SendButton_Click" />
+            </p>
+        </div>
     </form>
 </body>
 </html>
